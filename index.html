@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Product-showcase</title>
+  <link rel='stylesheet' href='https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css'><link rel="stylesheet" href="./style.css">
+<style>
+	 @import url("https://fonts.googleapis.com/css?family=Raleway:400,400i,700");
+  html,
+		body {
+		  margin: 0;
+		  padding: 0;
+		}
+		
+        h1 {
+		font-family: Raleway, sans-serif;
+        font-size: 30px;
+        font-weight: 0px;
+        text-transform: uppercase;
+        text-align: center;
+        padding-top: 0px;
+		padding-bottom: 0px;
+        }
+
+		h2,
+		p {
+		  margin: 30px 0 0;
+		  padding: 0;
+          color: #FF5722;
+		}
+		
+		p {
+		  color: #FF5722;
+		}
+		
+		.slider {
+			max-width: none; /* Remove max-width to allow full width */
+  width: 100%; /* Set width to 100% */
+		  margin: 15px auto;
+		  background: #ffffff;
+		  border-radius: 5px;
+		  padding: 20px 0;
+		  
+		  /*h v b s*/
+		}
+		
+		.slick-slider button {
+		  display: none!important;
+		}
+		
+		.slick-slide {
+		  color: #333;
+		  padding: 40px 0;
+		  font-size: 1.25em;
+		  font-family: Raleway, sans-serif;
+		  text-align: center;
+		  
+		}
+		
+		.slick-slide .desc {
+		  opacity: 1;
+		}
+		
+		.slick-slide .desc > * {
+		  transition: all 900ms ease;
+		}
+		
+		.slick-slide .desc h2 {
+		  position: relative;
+		  left: 50px;
+		  line-height: 1;
+		}
+		
+		.slick-slide .desc p {
+		  position: relative;
+		  top: 50px;
+		  opacity: 0;
+		}
+		
+		.slick-slide img {
+		  width: 100%;
+		}
+		
+		.slick-prev:before,
+		.slick-next:before {
+		  color: black;
+		}
+		
+		.slick-dots {
+		  text-align: center;
+		  margin-bottom: -20000px !important; /* Adjust the value as needed to reduce the length */
+		}
+		
+		.slick-dots li {
+		  display: inline-block;
+		  padding: 1px;
+		  background: #ccc;
+		  margin: 10px 5px;
+		  width: 40px;
+		  height: 0px;
+		}
+		
+		.slick-dots li.slick-active {
+		  background: #FF5722;
+		}
+		
+		.slick-dots button {
+		  display: none;
+		}
+		
+		.slick-slide:nth-child(odd) {
+		  /* background: blue;*/
+		}
+		
+		.slick-slide {
+		  opacity: 0.2;
+		  transition: all 300ms ease;
+		}
+		
+		.slick-current {
+		  opacity: 1;
+		  transform: scale(1.1);
+		}
+		
+		.slick-current .desc {
+		  opacity: 1;
+		}
+		
+		.slick-current .desc h2 {
+		  left: 0;
+		}
+		
+		.slick-current .desc p {
+		  top: 0;
+		  opacity: 1;
+		}
+		
+	.btn {
+  border-radius: 5px; /* Adjust as needed */
+  padding: 10px 20px;
+  border: 1px solid #ff0000;
+  text-decoration: none;
+  color: #FF5722;
+  font-size: 14px; /* Adjust as needed */
+  text-transform: uppercase;
+  display: inline-block;
+  margin-top: 20px; /* Adjust as needed */
+  font-weight: thin;
+  transition: padding-left 0.3s, padding-right 0.3s; /* Added transitions for padding */
+  overflow: hidden; /* Hides the overflow during transition */
+  position: relative; /* Needed for absolute positioning */
+}
+
+.btn:hover {
+  padding-left: 40px; /* Increase padding to slide from left */
+  padding-right: 20px; /* Reduce padding to slide from left */
+}
+
+/* Added styles for the slide effect */
+.btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -30px; /* Initial position outside the button */
+  width: 30px; /* Width of the sliding element */
+  height: 100%;
+  background-color: #FF5722; /* Background color of the sliding element */
+  transition: left 0.3s; /* Transition property for sliding effect */
+}
+
+.btn:hover::before {
+  left: 100%; /* Slide the element to 100% of the button width */
+}
+
+</style>
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<h1>Best Sellers</h1>
+<section class="slider">
+  
+    <div>
+        <a href="https://b4dd14-4.myshopify.com/pages/grow-your-brand">
+        <img src="https://cdn.shopify.com/s/files/1/0768/6019/5112/collections/IMG_3882_1.jpg?v=1708785557">
+        </a>
+        <div class="desc">
+          <h2>ALUMINUM ICE BLUE</h2>
+          
+          <a href="https://b4dd14-4.myshopify.com/pages/grow-your-brand" class="btn">View</a>
+          
+        </div>
+      </div>
+  
+      
+  <div>
+	<a href="https://b4dd14-4.myshopify.com/pages/grow-your-brand">
+    <img src="https://cdn.shopify.com/s/files/1/0768/6019/5112/collections/290ACB0F-DBA4-4DBA-BC94-386F5BA4B1D5.jpg?v=1708608907">
+  </a>
+    <div class="desc">
+      <h2>BONE</h2>
+      
+      <a href="https://b4dd14-4.myshopify.com/pages/grow-your-brand" class="btn">View</a>
+    </div>
+  </div>
+
+ 
+  <div>
+	<a href="https://b4dd14-4.myshopify.com/pages/grow-your-brand">
+    <img src="https://cdn.shopify.com/s/files/1/0768/6019/5112/collections/IMG_4473_1.jpg?v=1708528389">
+	</a>
+    <div class="desc">
+      <h2>AIRNESS</h2>
+      
+      <a href="https://b4dd14-4.myshopify.com/pages/grow-your-brand" class="btn">View</a>
+    </div>
+  </div>
+
+
+  <div>
+	<a href="https://b4dd14-4.myshopify.com/pages/grow-your-brand">
+    <img src="https://cdn.shopify.com/s/files/1/0768/6019/5112/collections/FF4B3B58-EBAA-4D87-A629-6CE54C35799E.png?v=1708528406">
+	</a>
+    <div class="desc">
+      <h2>AIR FORCE 1</h2>
+      
+      <a href="https://b4dd14-4.myshopify.com/pages/grow-your-brand" class="btn">View</a>
+    </div>
+  </div>
+
+  <div>
+    <img src="https://cdn.shopify.com/s/files/1/0768/6019/5112/collections/IMG_4464_1.jpg?v=1708608944">
+    <div class="desc">
+      <h2>SESAME</h2>
+      <a href="https://b4dd14-4.myshopify.com/pages/grow-your-brand" class="btn">View</a>
+    </div>
+  </div>
+
+ 
+</section>
+<!-- partial -->
+  <script src='https://code.jquery.com/jquery-1.11.0.min.js'></script>
+<script src='https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js'></script><script  src="./script.js"></script>
+<script>
+  function createSlick(){  
+
+$(".slider").not('.slick-initialized').slick({
+  centerMode: true,
+    autoplay: true,
+    dots: true,
+
+    slidesToShow: 3,
+    responsive: [{ 
+        breakpoint: 768,
+        settings: {
+            dots: false,
+            arrows: false,
+            infinite: false,
+            slidesToShow: 1,
+            slidesToScroll: 1
+        } 
+    }]
+});	
+
+}
+
+createSlick();
+
+//Will not throw error, even if called multiple times.
+$(window).on( 'resize', createSlick );
+</script>
+</body>
+</html>
